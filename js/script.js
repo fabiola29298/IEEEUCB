@@ -29,19 +29,9 @@ jQuery(function ($) { "use strict";
 	});
 
 
-	/* ========================================================================= */
-	/*	Menu item highlighting
-	/* ========================================================================= */
-
-
 	$("#navigation").sticky({
 		topSpacing : 0
 	});
-	
-
-	/* ========================================================================= */
-	/*	Magnific popup
-	/* =========================================================================  */
 	$('.image-popup').magnificPopup({
     type: 'image',
     removalDelay: 160, //delay removal by X to allow out-animation
@@ -57,15 +47,6 @@ jQuery(function ($) { "use strict";
     fixedContentPos: false,
     fixedBgPos: true
 });
-	/* ========================================================================= */
-	/*	Portfolio Filtering Hook
-	/* =========================================================================  */
-
-  	var mixer = mixitup('.portfolio-items-wrapper');
-	
-	/* ========================================================================= */
-	/*	Testimonial Carousel
-	/* =========================================================================  */
  
 	//Init the carousel
 	$("#testimonials").slick({
@@ -75,39 +56,18 @@ jQuery(function ($) { "use strict";
   		autoplaySpeed: 4000
 	});
 
-
-
-
-
-	/* ========================================================================= */
-	/*   Contact Form Validating
-	/* ========================================================================= */
-
-
+ 
 	$('#contact-submit').click(function (e) {
 
 		//stop the form from being submitted
 		e.preventDefault();
-
-		/* declare the variables, var error is the variable that we use on the end
-		to determine if there was an error or not */
+ 
 		var error = false;
 		var name = $('#name').val();
 		var email = $('#email').val();
 		var subject = $('#subject').val();
 		var message = $('#message').val();
-
-		/* in the next section we do the checking by using VARIABLE.length
-		where VARIABLE is the variable we are checking (like name, email),
-		length is a JavaScript function to get the number of characters.
-		And as you can see if the num of characters is 0 we set the error
-		variable to true and show the name_error div with the fadeIn effect. 
-		if it's not 0 then we fadeOut the div( that's if the div is shown and
-		the error is fixed it fadesOut. 
-		
-		The only difference from these checks is the email checking, we have
-		email.indexOf('@') which checks if there is @ in the email input field.
-		This JavaScript function will return -1 if no occurrence have been found.*/
+ 
 		if (name.length == 0) {
 			var error = true;
 			$('#name').css("border-color", "#D8000C");
@@ -163,13 +123,7 @@ jQuery(function ($) { "use strict";
 	});
 
 });
-// End Jquery Function
-
-
-	/* ========================================================================= */
-	/*	Animated section
-	/* ========================================================================= */
-
+ 
 	var wow = new WOW(
 		{
 		  offset:       100,          // distance to the element when triggering the animation (default is 0)
@@ -179,17 +133,10 @@ jQuery(function ($) { "use strict";
 	 wow.init();
 
 
-	/* ========================================================================= */
-	/*	Smooth Scroll
-	/* ========================================================================= */
-	var scroll = new SmoothScroll('a[href*="#"]');
+	 var scroll = new SmoothScroll('a[href*="#"]');
 
 
-
-	/* ========================================================================= */
-	/*	Google Map Customization
-	/* =========================================================================  */
-
+ 
 	function initialize() {
 
 		var myLatLng = new google.maps.LatLng(22.333851, 91.812256);
@@ -264,44 +211,6 @@ jQuery(function ($) { "use strict";
 			}]
 		}];
 
-		var mapOptions = {
-			zoom: 14,
-			center: myLatLng,
-			disableDefaultUI: true,
-			scrollwheel: false,
-			navigationControl: false,
-			mapTypeControl: false,
-			scaleControl: false,
-			draggable: false,
-			mapTypeControlOptions: {
-				mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'roadatlas']
-			}
-		};
-
-		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-
-		var marker = new google.maps.Marker({
-			position: myLatLng,
-			map: map,
-			title: '',
-		});
-
-
-		google.maps.event.addListener(marker, 'click', function () {
-			infowindow.open(map, marker);
-		});
-
-		var styledMapOptions = {
-			name: 'US Road Atlas'
-		};
-
-		var usRoadMapType = new google.maps.StyledMapType(
-			roadAtlasStyles, styledMapOptions);
-
-		map.mapTypes.set('roadatlas', usRoadMapType);
-		map.setMapTypeId('roadatlas');
+		 
 	}
-
-	google.maps.event.addDomListener(window, "load", initialize);
-
+ 
