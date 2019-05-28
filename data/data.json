@@ -1,0 +1,60 @@
+[
+    {
+      "key": "2017",
+      "color": "#d62728",
+      "values": [
+        { 
+          "label" : "Group A" ,
+          "value" : 5
+        } , 
+        { 
+          "label" : "Group B" ,
+          "value" : 3
+        } , 
+        { 
+          "label" : "Group C" ,
+          "value" : 1
+        } 
+         
+      ]
+    },
+    {
+      "key": "2018",
+      "color": "#d6a728",
+      "values": [
+        { 
+          "label" : "Group A" ,
+          "value" : 9
+        } , 
+        { 
+          "label" : "Group B" ,
+          "value" : 7
+        } , 
+        { 
+          "label" : "Group C" ,
+          "value" : 2
+        } 
+         
+      ]
+    },
+    {
+      "key": "2019",
+      "color": "#1f77b4",
+      "values": [
+        { 
+          "label" : "Group A" ,
+          "value" : 101
+        } , 
+        { 
+          "label" : "Group B" ,
+          "value" : 50
+        } , 
+        { 
+          "label" : "Group C" ,
+          "value" : 27
+        } 
+         
+      ]
+    }
+  ]
+  
